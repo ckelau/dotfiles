@@ -1,0 +1,14 @@
+The following information is from
+
+https://ttssh2.osdn.jp/manual/en/setup/teraterm.html
+
+To export
+1. Setup > Save setup
+
+To restore
+1. Setup > Restore setup
+
+or
+
+1. Copy teraterm.ini to "My Documents"
+NOTE: filename must be teraterm.ini in order for it to use it by default

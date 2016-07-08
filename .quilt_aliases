@@ -1,0 +1,68 @@
+alias qn='quilt new'
+# alias qa='quilt add'
+alias qf='quilt files'
+alias qls='quilt files'
+alias qr='export QUILT_DIFF_OPTS="--show-c-function -U 10"; quilt refresh -p ab --no-timestamps --no-index'
+alias qref='echo unloading old patches; (quilt pop -af 2>&1) > /dev/null; quilt push -a'
+alias qpush='echo unloading old patches; (quilt pop -af 2>&1) > /dev/null; quilt push -f'
+# fix patch sets - if a patch has offset warnings, this will corrent them
+qfix()
+{
+    local _rc=0;
+
+    # Jump to starting location
+    [ -n "$1" ] && { qpush $1 || return 1; }
+
+    # refresh initial patch
+    qr
+
+    while [ $_rc -eq 0 ]; do
+        quilt push -f
+        _rc=$?
+
+        # rc of 1 indicates an error, so we quit
+        [ $_rc -eq 1 ] && return 1
+
+        # rc of 0 and 2 gets a refresh
+        qr
+    done
+}
+
+(unalias qa 2>&1) > /dev/null
+qa()
+{
+    allow_new=0
+    [ -n "$1" ] || return 1
+    [ -n "$2" ] && {
+        allow_new=1
+    }
+
+    file="openwrt/qca/src/qca-wifi-10.4/$1"
+    if [ ! -e $file -a $allow_new -eq 0 ]; then
+        echo "--> source file $file does not exist"
+        return 1
+    else
+        echo "--> adding source file $file"
+
+        echo
+        quilt add $file
+    fi
+}
+
+qe()
+{
+    [ -n "$1" ] || return 1
+
+    file="openwrt/qca/src/qca-wifi-10.4/$1"
+    vim $file && qr
+}
+
+qne()
+{
+    [ -n "$1" ] || return 1
+    [ -n "$2" ] || return 1
+    
+    quilt new $1
+    quilt edit $2
+    qr
+}

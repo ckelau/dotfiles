@@ -1,0 +1,15 @@
+The following was taken from
+
+http://winscp.net/eng/docs/config
+
+To export
+1. Session > Sites > Site Manager
+2. Tools > Export/Backup configuration
+3. Save the configuration
+
+To import
+1. Session > Sites > Site Manager
+2. Tools > Import/Restore configuration
+3. Open the ini saved previously
+
+It maybe better to do a clean up before import by go to Tools > Clean Up

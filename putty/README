@@ -1,0 +1,11 @@
+PuTTY's session was exported using
+
+regedit /e "%userprofile%\Desktop\putty-session-<name>.reg" HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\<name>
+
+It can be restored using
+
+reg import "%userprofile%\Desktop\putty-session-<name>.reg"
+
+CAUTION: you should remove the profile with the same name in PuTTY first.
+
+putty-session-colour.reg contains the default colour for reference only.

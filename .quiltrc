@@ -1,0 +1,3 @@
+EDITOR="vim"
+QUILT_DIFF_OPTS="--show-c-function -U 10"
+QUILT_DIFF_ARGS="--no-timestamps --no-index -p ab"
