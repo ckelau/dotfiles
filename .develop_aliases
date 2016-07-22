@@ -5,7 +5,7 @@ fe()
     FILE=`find . -name $1`
     NUM_FILE=`echo "$FILE" | wc -l`
 
-    if [ -n $FILE ]; then
+    if [ -z $FILE ]; then
         echo "Cannot find any file with the name."
         return 2
     fi

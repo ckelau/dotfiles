@@ -73,7 +73,7 @@ qfe()
 
     FILE=`find . -name $1`
 
-    [ -n "FILE" ] || return 2
+    [ -n "$FILE" ] || return 2
 
     quilt edit $FILE
     qr
