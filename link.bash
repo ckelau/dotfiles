@@ -50,6 +50,7 @@ LINKED_FILES=" \
     .bash_profile \
     .bash_logout \
     .bash_aliases \
+    .develop_aliases \
     .quilt_aliases \
     .gitconfig \
     .gitignore_global \
