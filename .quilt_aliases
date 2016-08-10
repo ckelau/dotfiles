@@ -66,3 +66,16 @@ qne()
     quilt edit $2
     qr
 }
+
+qfe()
+{
+    [ -n "$1" ] || return 1
+
+    FILE=`find . -name $1`
+
+    [ -n "$FILE" ] || return 2
+
+    quilt edit $FILE
+    qr
+}
+

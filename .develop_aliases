@@ -1,0 +1,20 @@
+fe()
+{
+    [ -n "$1" ] || return 1
+
+    FILE=`find . -name $1`
+    NUM_FILE=`echo "$FILE" | wc -l`
+
+    if [ -z $FILE ]; then
+        echo "Cannot find any file with the name."
+        return 2
+    fi
+
+    if [ $NUM_FILE -gt 1 ]; then
+        echo "More than 1 file with the name"
+        return 3
+    fi
+
+    vim $FILE
+}
+
