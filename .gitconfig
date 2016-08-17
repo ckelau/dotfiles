@@ -57,5 +57,6 @@
 	templatedir = ~/.git_template
 [diff]
 	algorithm = patience
+	tool = vimdiff
 [credential]
 	helper = cache --timeout 30000
