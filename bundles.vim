@@ -64,7 +64,7 @@ NeoBundle 'a.vim'
 "NeoBundle 'eagletmt/ghcmod-vim'
 
 " Personal Stuff
-NeoBundle 'vim-scripts/autoload_cscope.vim'
+NeoBundle 'ckelau/autoload_cscope.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
