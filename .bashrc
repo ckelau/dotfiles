@@ -8,6 +8,18 @@ case $- in
       *) return;;
 esac
 
+# Color terminal detection
+case "$COLORTERM" in
+    gnome-terminal)
+        case "$TERM" in
+            *-256color) ;;
+            *)
+                export TERM=xterm-256color
+                ;;
+        esac
+        ;;
+esac
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
