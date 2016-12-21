@@ -21,6 +21,3 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-if [ -d "$HOME/staging_qsdk_banana_10.4/host/Xtensa/cad/tensilica/tools/RD-2011.2-linux/XtensaTools/bin" ] ; then
-    PATH="$HOME/staging_qsdk_banana_10.4/host/Xtensa/cad/tensilica/tools/RD-2011.2-linux/XtensaTools/bin:$PATH"
-fi

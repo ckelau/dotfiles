@@ -1,0 +1,7 @@
+# xtensa tools setup
+if [ -d "$HOME/staging_qsdk_banana_10.4/host/Xtensa/cad/tensilica/tools/RD-2011.2-linux/XtensaTools/bin" ] ; then
+    PATH="$HOME/staging_qsdk_banana_10.4/host/Xtensa/cad/tensilica/tools/RD-2011.2-linux/XtensaTools/bin:$PATH"
+    export XTENSA_SYSTEM="$HOME/staging_qsdk_banana_10.4/host/Xtensa/cad/tensilica/chips/peregrine/RD-2011.2-linux/Peregrine_64r16wb2LS_tie/config"
+    export XTENSA_CORE="Peregrine_64r16wb2LS_tie"
+fi
+
