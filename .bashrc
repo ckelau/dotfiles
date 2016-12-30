@@ -8,6 +8,14 @@ case $- in
       *) return;;
 esac
 
+# Disabling flow control
+# forward-search-history is usually assigned to C-s but the key sequence is
+# also used in flow control. Flow control can be enabled using
+# $ stty ixon
+# or reassigning forward-search-history
+# $ bind "\C-t":forward-search-history
+stty -ixon
+
 # Color terminal detection
 case "$COLORTERM" in
     gnome-terminal)
