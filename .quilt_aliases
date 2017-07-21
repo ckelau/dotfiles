@@ -2,9 +2,10 @@ alias qn='quilt new'
 # alias qa='quilt add'
 alias qf='quilt files'
 alias qls='quilt files'
-alias qr='export QUILT_DIFF_OPTS="--show-c-function -U 10"; quilt refresh -p ab --no-timestamps --no-index'
+alias qr='export QUILT_DIFF_OPTS="--show-c-function --color=auto -pab -U 7"; quilt refresh --sort --no-timestamps --no-index -p ab -U 7'
 alias qref='echo unloading old patches; (quilt pop -af 2>&1) > /dev/null; quilt push -a'
 alias qpush='echo unloading old patches; (quilt pop -af 2>&1) > /dev/null; quilt push -f'
+
 # fix patch sets - if a patch has offset warnings, this will corrent them
 qfix()
 {

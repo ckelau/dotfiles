@@ -1,3 +1,5 @@
 EDITOR="vim"
-QUILT_DIFF_OPTS="--show-c-function -U 10"
-QUILT_REFRESH_ARGS="--no-timestamps --no-index -p ab"
+QUILT_DIFF_OPTS="--show-c-function -U 7"
+QUILT_DIFF_ARGS="--color=auto -pab -U 7"
+QUILT_PATCH_ARGS="--fuzz=1"
+QUILT_REFRESH_ARGS="--sort --no-index --no-timestamps -p ab -U 7"
