@@ -9,8 +9,9 @@ set encoding=utf-8
 " Enable mouse support
 set mouse=a
 
-" Display line numbers
+" Display relative line numbers on top of line number
 set number
+set relativenumber
 
 " Enable syntax highlighting detection
 syntax on
