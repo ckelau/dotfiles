@@ -35,7 +35,7 @@ nnoremap <leader>hc :nohl<CR><C-L>
 " Plugin preferences
 "-----------------------------------------------------------------------------
 " Colorscheme
-colorscheme xoria256
+silent! colorscheme xoria256
 
 " ultisnips snippet location
 let g:UltiSnipsSnippetsDir="~/.vim/bundle/ultisnips/UltiSnips"

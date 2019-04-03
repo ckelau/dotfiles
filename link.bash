@@ -60,6 +60,7 @@ LINKED_FILES=" \
     .ghci \
     .cabal/config \
     .quiltrc \
+    .minttyrc \
     bin/* \
     "
 COPIED_FILES=""

@@ -27,10 +27,10 @@ NeoBundle 'Shougo/neocomplete.vim'
 
 " You may need to do
 " rake make
-" in .vim/bundle/Command-T
+" manually in .vim/bundle/Command-T
 NeoBundle 'wincent/Command-T', {
       \ 'build' : {
-      \     'unix' : 'ruby ruby/command-t/ext/extconf.rb && mv Makefile ruby/command-t && make -C ruby/command-t',
+      \     'unix' : 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
       \    },
       \ }
 
