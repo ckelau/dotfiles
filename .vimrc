@@ -65,16 +65,16 @@ let g:CommandTMaxFiles=100000
 "-----------------------------------------------------------------------------
 " Fugitive (Git plugin)
 "-----------------------------------------------------------------------------
-if has("autocmd")
-    " Use .. to navigate up a tree when browsing fugitive history
-    autocmd User fugitive
-      \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-      \   nnoremap <buffer> .. :edit %:h<CR> |
-      \ endif
-
-    " Automatically close hidden fugitive files. less buffer clutter
-    autocmd BufReadPost fugitive://* set bufhidden=delete
-endif
+"if has("autocmd")
+"    " Use .. to navigate up a tree when browsing fugitive history
+"    autocmd User fugitive
+"      \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+"      \   nnoremap <buffer> .. :edit %:h<CR> |
+"      \ endif
+"
+"    " Automatically close hidden fugitive files. less buffer clutter
+"    autocmd BufReadPost fugitive://* set bufhidden=delete
+"endif
 
 "-----------------------------------------------------------------------------
 " Neocomplete
