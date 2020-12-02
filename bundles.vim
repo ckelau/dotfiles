@@ -25,15 +25,7 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 NeoBundle 'Shougo/neocomplete.vim'
 
-" You may need to do
-" rake make
-" manually in .vim/bundle/Command-T
-NeoBundle 'wincent/Command-T', {
-      \ 'build' : {
-      \     'unix' : 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
-      \    },
-      \ }
-
+NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
@@ -43,7 +35,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-abolish'
 
-NeoBundle 'SirVer/ultisnips'
+"NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'

@@ -47,34 +47,18 @@ let g:Powerline_symbols="unicode"
 set completeopt=longest,menuone
 
 "-----------------------------------------------------------------------------
-" Command-T
-"-----------------------------------------------------------------------------
-nnoremap [commandt] <Nop>
-nmap <Space> [commandt]
-
-nnoremap <silent>[commandt]<Space> :CommandT<CR>
-nmap <C-p> [commandt]<Space>
-nmap <Leader>t [commandt]<Space>
-
-nnoremap <silent>[commandt]b :CommandTBuffer<CR>
-nnoremap <silent>[commandt]f :CommandTJump<CR>
-
-let g:CommandTFileScanner="find"
-let g:CommandTMaxFiles=100000
-
-"-----------------------------------------------------------------------------
 " Fugitive (Git plugin)
 "-----------------------------------------------------------------------------
-"if has("autocmd")
-"    " Use .. to navigate up a tree when browsing fugitive history
-"    autocmd User fugitive
-"      \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-"      \   nnoremap <buffer> .. :edit %:h<CR> |
-"      \ endif
-"
-"    " Automatically close hidden fugitive files. less buffer clutter
-"    autocmd BufReadPost fugitive://* set bufhidden=delete
-"endif
+if has("autocmd")
+    " Use .. to navigate up a tree when browsing fugitive history
+    autocmd User fugitive
+      \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+      \   nnoremap <buffer> .. :edit %:h<CR> |
+      \ endif
+
+    " Automatically close hidden fugitive files. less buffer clutter
+    autocmd BufReadPost fugitive://* set bufhidden=delete
+endif
 
 "-----------------------------------------------------------------------------
 " Neocomplete
