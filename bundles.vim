@@ -64,6 +64,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'Konfekt/FastFold'
+NeoBundle 'nfvs/vim-perforce'
 
 
 filetype plugin indent on     " required! 
