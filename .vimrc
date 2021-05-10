@@ -85,4 +85,9 @@ let g:syntastic_haskell_hlint_args = '--ignore="Redundant bracket"'
 " Python
 let g:syntastic_python_checkers = ['python', 'flake8']
 
+"-----------------------------------------------------------------------------
+" CtrlP
+"-----------------------------------------------------------------------------
+let g:ctrlp_max_files=0
+
 
